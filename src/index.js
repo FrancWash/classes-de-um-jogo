@@ -7,12 +7,26 @@ class hero{
         this.atake = atake
     }
  //metodo atacar   
+ //Estruturas de decisões
     atacar(){
+        let atake = this.atake
+        switch (this.tipo){
+            case "Guerreiro":
+              break
+            case "Mago":
+               break
+            case "Ninja":
+                break
+                default:
+                    atake = "Atacou"
+        }
+
         console.log(`O ${this.tipo} atacou ${this.atake}`)
     } 
 }
 //interpolarização de strings
 let heroi = new hero("Tob", 26, "Guerreiro", "usando espada")
+heroi.atacar()// O Tob atacou usando a espada
+
 let heroiNinja = new hero("Naruto", 16, "ninja", "usando shuriken")
-heroi.atacar()
-heroiNinja.atacar()
+heroiNinja.atacar()//O Naruto atacou usando o shriken
